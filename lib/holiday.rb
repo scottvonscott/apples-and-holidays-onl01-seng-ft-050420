@@ -54,9 +54,9 @@ def all_supplies_in_holidays(holiday_supplies)
            line_b.collect do |words|
             line_d = []
              line_d << words.capitalize
-             binding.pry
        puts "#{line_a}:"
        puts "  #{line_d} #{line_c}"
+       binding.pry
        end
      end
    end
