@@ -47,7 +47,7 @@ end
 
 def all_supplies_in_holidays(holiday_supplies)
   holiday_supplies.collect do |season, holiday_hash|
-     line_a = season.to_s.capitalize
+     line_a = season.capitalize
        holiday_hash.collect do |day, supplies|
          line_b = day.to_s.split("_")
          line_c = supplies.join(", ")
@@ -55,7 +55,7 @@ def all_supplies_in_holidays(holiday_supplies)
             line_d = []
              line_d << words.capitalize
        puts "#{line_a}:"
-       puts   line_d "#{line_c}"
+       puts "  #{line_d} #{line_c}"
        end
      end
    end
