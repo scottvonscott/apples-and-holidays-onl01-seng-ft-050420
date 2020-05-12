@@ -62,9 +62,17 @@ def all_supplies_in_holidays(holiday_supplies)
 
 
 def all_holidays_with_bbq(holiday_supplies)
-  holiday_supplies.select do |seasons, holidays|
-    holidays.include?('BBQ')
+  holiday_supplies.select do |seasons, holidays, supplies|
+    season[:holiday][:supplies] == 'BBQ'
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 end
 end
+
+# def all_holidays_with_bbq(holiday_supplies)
+#   holiday_supplies.select do |seasons, holidays|
+#     holidays.include?('BBQ')
+#   # return an array of holiday names (as symbols) where supply lists
+#   # include the string "BBQ"
+# end
+# end
