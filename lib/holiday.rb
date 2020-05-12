@@ -55,7 +55,7 @@ def all_supplies_in_holidays(holiday_supplies)
             line_d = []
              line_d << words.capitalize
        puts "#{line_a}:"
-       puts "  line_d #{line_c}"
+       puts   line_d "#{line_c}"
        end
      end
    end
