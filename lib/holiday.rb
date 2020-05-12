@@ -51,9 +51,9 @@ def all_supplies_in_holidays(holiday_supplies)
        holiday_hash.each do |day, supplies|
          day_array = day.to_s.split("_")
          cap_days = []
-         binding.pry
            day_array.collect do |words|
              cap_days << words.capitalize
+             binding.pry
          day_line = cap_days.join(" ")
      puts "  #{day_line}: #{supplies.join(", ")}"
        end
