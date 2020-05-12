@@ -63,9 +63,7 @@ def all_supplies_in_holidays(holiday_supplies)
 
 def all_holidays_with_bbq(holiday_hash)
  holiday_hash[:season]
-  binding.pry
   # holiday_names_andbbq << holiday_hash[:season][:holiday][2]
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-holiday_names_andbbq
 end
