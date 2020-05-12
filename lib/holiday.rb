@@ -45,33 +45,22 @@ def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
 end
 
-def all_supplies_in_holidays(holiday_hash)
-  holiday_hash.collect do |season, holiday|
+def all_supplies_in_holidays(holiday_supplies)
+  holiday_supplies.collect do |season, holiday_hash|
      line_a = season.capitalize
-       holiday.collect do |day, supplies|
-         line_b = day.to_s.split(" ")
-        #  binding.pry
+       holiday_hash.collect do |day, supplies|
+         line_b = day.to_s.split("_")
          line_c = supplies.join(", ")
            line_b.collect do |words|
-             line_d = words.capitalize
+            line_d = []
+             line_d << words.capitalize
        puts "#{line_a}:"
-       puts "  #{line_d}:"" #{line_c}"
+       puts "  #{line_d} #{line_c}"
        end
      end
    end
  end
 
-
- def all_supplies_in_holidays(holiday_supplies)
-   holiday_supplies.collect do |season, holiday_hash|
-     puts "#{season.capitalize}:"
-     holiday_hash.collect do |holiday, supplies|
-       holiday supplies.to_s
-         array.join # here is where you should print holidays and supplies
-       end
-   end
- end
- end
 
 
 
