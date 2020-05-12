@@ -62,7 +62,7 @@ def all_supplies_in_holidays(holiday_supplies)
 
 
 def all_holidays_with_bbq(holiday_supplies)
-  holiday_supplies.detect { |seasons, values| break key if values.include?('BBQ') }
+  holiday_supplies.detect { |seasons, holidays, supplies| break holiday if supplies.include?('BBQ') }
 
   # holiday_names_andbbq << holiday_hash[:season][:holiday][2]
   # return an array of holiday names (as symbols) where supply lists
