@@ -64,6 +64,8 @@ def all_supplies_in_holidays(holiday_supplies)
 def all_holidays_with_bbq(holiday_supplies)
     seasons = []
     seasons << holiday_supplies.keys
+    holidays = []
+    holidays << seasons.keys
     binding.pry
   # holiday_names_andbbq << holiday_hash[:season][:holiday][2]
   # return an array of holiday names (as symbols) where supply lists
