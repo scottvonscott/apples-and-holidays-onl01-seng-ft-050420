@@ -70,6 +70,8 @@ end
          array.join # here is where you should print holidays and supplies
        end
    end
+ end
+ end
 
 
 
