@@ -54,9 +54,9 @@ def all_supplies_in_holidays(holiday_supplies)
            day_array.collect do |words|
              cap_days << words.capitalize
            day_line = cap_days.join(" ")
-     puts "  #{day_line}: #{supplies.join(", ")}"
        end
      end
+     puts "  #{day_line}: #{supplies.join(", ")}"
    end
   end
 
