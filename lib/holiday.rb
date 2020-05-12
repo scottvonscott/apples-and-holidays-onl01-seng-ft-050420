@@ -46,20 +46,36 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_supplies)
-  holiday_supplies.collect do |season, holiday_hash|
-     line_a = season.capitalize
-       holiday_hash.collect do |day, supplies|
-         line_b = day.to_s.split("_")
-         line_c = supplies.join(", ")
-           line_b.collect do |words|
-            line_d = []
-             line_d << words.capitalize
-       puts "#{line_a}:"
-       puts "  #{line_d} #{line_c}"
+  holiday_supplies.each do |season, holiday_hash|
+     puts "#{season.to_s.capitalize}:"
+       holiday_hash.each do |day, supplies|
+         day_array = day.to_s.split("_")
+         cap_days = []
+         binding.pry
+           day_array.collect do |words|
+             cap_days << words.capitalize
+         day_line = cap_days.join(" ")
+     puts "  #{day_line}: #{supplies.join(", ")}"
        end
      end
    end
- end
+  end
+# def all_supplies_in_holidays(holiday_supplies)
+#   holiday_supplies.collect do |season, holiday_hash|
+#      line_a = season.capitalize
+#        holiday_hash.collect do |day, supplies|
+#          line_b = day.to_s.split("_")
+#          line_c = supplies.join(", ")
+#          line_d = []
+#            line_b.collect do |words|
+#              line_d << words.capitalize
+#              line_e = line_d.join(' ')
+#        puts "#{line_a}:"
+#        puts "  #{line_e}:" "#{line_c}"
+#        end
+#      end
+#    end
+#  end
 
 
 
