@@ -62,8 +62,8 @@ def all_supplies_in_holidays(holiday_supplies)
 
 
 def all_holidays_with_bbq(holiday_supplies)
-  holiday_supplies.select do |seasons, holidays, supplies|
-    holidays[supplies] == "BBQ"
+  holiday_supplies.select do |seasons, holidays|
+    seasons[holidays] == "BBQ"
     binding.pry
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
