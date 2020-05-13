@@ -65,8 +65,7 @@ def all_holidays_with_bbq(holiday_supplies)
   holiday_supplies.collect do |seasons, holidays|
     holidays.select do |holiday, supplies|
       supplies.include?("BBQ")
-      binding.pry
-end
+    end
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 end
