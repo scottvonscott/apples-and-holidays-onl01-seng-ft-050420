@@ -62,8 +62,8 @@ def all_supplies_in_holidays(holiday_supplies)
 
 
 def all_holidays_with_bbq(holiday_supplies)
-  holiday_supplies.select do |seasons, holidays|
-    holidays.each do |holiday, supplies|
+  holiday_supplies.each do |seasons, holidays|
+    holidays.select do |holiday, supplies|
       supplies.include?("BBQ")
       binding.pry
 end
